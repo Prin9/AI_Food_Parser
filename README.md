@@ -6,4 +6,5 @@ Core model - MobileNetV2 (Python)
 
 Core framework - Django
 
-https://youtu.be/Tu5O5s9Kt5M
+https://user-images.githubusercontent.com/88686481/236111753-a72c48f1-f30a-46fa-b642-9b08f4604b22.mp4
+
