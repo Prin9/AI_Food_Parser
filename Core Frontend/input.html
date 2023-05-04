@@ -1,0 +1,12 @@
+
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<form action="process" method="POST" action="" >
+    {% csrf_token %}
+    <input class="circle" style="background-color: aquamarine;" type="file" name="food-img" value="Click A Delicious Pic">
+    <button type="submit">Scan</button>
+</form>
+
+{% endblock %}

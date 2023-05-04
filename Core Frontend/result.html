@@ -1,0 +1,83 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+
+
+<div id="top-block" style="background-image: url('https://images.shiksha.com/mediadata/images/articles/1614851853phpudQ9YU.jpeg');">
+    <p id="titleText">{{title}}</p>
+</div>
+
+<div class="content-block">
+    <p class="header">Ingredients</p>
+    <p class="content">
+        {{ingredients|linebreaksbr}}
+    </p>
+</div>
+
+<div class="alt_color content-block">
+    <p class="header">Recipe Instructions</p>
+    <p class="content">
+        {{instructions|linebreaksbr}}
+    </p>
+</div>
+
+
+<div class="content-block">
+    <p class="header">Nutritional Info</p>
+    <div class = "center-divs">
+        <div class="circle" id ="calories"> Calories : {{calories}}</div>
+        <div class="circle" id ="carbs">Carbohydrates : {{carbs}}</div>
+        <div class="circle" id ="cholestrol">cholestrol : {{cholestrol}}</div>
+        <div class="circle" id ="fiber">fiber : {{fiber}}</div>
+        <div class="circle" id ="protein">Protein : {{protein}}</div>
+        <div class="circle" id ="sodium">sodium : {{sodium}}</div> 
+        <!--<div class="circle" id ="sugar">sugar : {{sugar}}</div> -->
+        <div class="circle" id ="fat">fat : {{fat}}</div>
+        <div class="circle" id ="unsaturatedFats">unsaturatedFats : {{unsaturatedFats}}</div>
+    </div>
+</div>
+
+<div class="content-block" style="overflow-wrap: normal;"> 
+    <form id="voice-form">
+        <textarea id="recipeText" hidden>{{text}}</textarea>
+
+
+        <div>
+            <button class=" btns bt1" type="submit">Speak Recipe</button>
+        </div>
+    </form>
+
+    <form action="input" method="POST" action="" >
+        {% csrf_token %}
+        <button class="btns bt2" type="submit">Scan Another</button>
+    </form>
+</div>
+
+
+<script>
+
+
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('voice-form');
+      const input = document.getElementById('recipeText');
+  
+      form.addEventListener('submit', event => {
+
+        event.preventDefault();
+        const toSay = input.value.trim();
+        const utterance = new SpeechSynthesisUtterance(toSay);
+        speechSynthesis.speak(utterance);
+
+
+
+
+
+        
+        
+      });
+    });
+  </script>
+
+{% endblock %}

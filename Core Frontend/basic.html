@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href='https://css.gg/css' rel='stylesheet'>
+    <style>
+        html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+p.header{
+    font-size: 200%;
+    text-align: center;
+    padding-top: 35px;
+}
+
+p.content {
+    padding: 35px;
+    }
+
+
+.circle {
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        border-radius: 50%;
+        font-size: 15px;
+        text-align: center;
+        display:inline-block;
+        margin: 30px;
+      }
+}
+
+.content-block{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.alt_color{
+    background: rgba( 0, 0, 0, 0.8);
+    color: beige;
+}
+
+.center-divs{
+    text-align:center;
+    width:100%;
+    
+}
+
+.btns{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    position: fixed;
+    display:block;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.bt1{
+    bottom: 10px;
+    right: 10px; 
+}
+
+.bt2{
+    bottom: 10px;
+    right: 120px; 
+}
+
+#top-block{
+    padding-top: 300px;
+    background: rgb(65, 65, 65);
+    background-size: cover;
+    filter: blur(0px);
+    background-blend-mode:overlay;
+    height: 100%;
+    margin-top: 0;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    text-align: center;
+}
+
+#titleText{
+    filter: blur(0);
+    display: table; /* keep the background color wrapped tight */
+    margin: 0px auto 0px auto; /* keep the table centered */
+    padding:15px;
+    background-color:rgb(255, 255, 255);
+    color:#ff004c;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    font-size: 50px;
+}
+
+
+#calories{
+    color: rgb(255, 255, 255);
+    background: #000;
+}
+
+#carbs{
+    color: #fff;
+    background: #000;
+}
+
+#cholestrol{
+    color: #fff;
+    background: #000;
+}
+#fiber{
+    color: #fff;
+    background: #000;
+}
+#protein{
+    color: #fff;
+    background: #000;
+}
+#sodium{
+    color: #fff;
+    background: #000;
+}
+#sugar{
+    color: #fff;
+    background: #000;
+}
+#fat{
+    color: #fff;
+    background: #000;
+}
+#unsaturatedFats{
+    color: #fff;
+    background: #000;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Eye</title>
+</head>
+<body>
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
